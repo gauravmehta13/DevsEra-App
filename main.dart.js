@@ -32630,7 +32630,7 @@ $S:1}
 F.AP.prototype={
 H:function(a,b){var s=K.az(b).cr,r=K.az(b).Z,q=B.eO(r.a),p=B.eO(r.b),o=B.eO(r.c),n=B.eO(r.d),m=B.eO(r.e),l=B.eO(r.f),k=B.eO(r.r),j=B.eO(r.x),i=B.eO(r.y),h=B.eO(r.z),g=B.eO(r.Q),f=B.eO(r.ch)
 s=X.a9U(new V.mp(C.R,s.b,s.c,s.d,s.e,s.f,s.r,s.x,s.y,s.z,s.Q,s.ch,s.cx,s.cy),null,new P.w(4280820149),R.a5A(i,h,f,g,q,p,o,n,m,l,B.eO(r.cx),k,j))
-return new S.rB(P.aq(["/",new F.RH(),"/Internships",new F.RI(),"/Courses",new F.RJ(),"/Login",new F.RK(),"/Signup",new F.RL(),"/Onboarding",new F.RM()],t.bi,t.gd),"/","DevsEra",s,!1,null)}}
+return new S.rB(P.aq(["/",new F.RH(),"/Internships",new F.RI(),"/Courses",new F.RJ(),"/Login",new F.RK(),"/Signup",new F.RL(),"/Onboarding",new F.RM()],t.bi,t.gd),"/Onboarding","DevsEra",s,!1,null)}}
 F.RH.prototype={
 $1:function(a){return new A.jj(null)},
 $S:63}
