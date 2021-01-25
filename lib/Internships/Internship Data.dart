@@ -12,7 +12,7 @@ var internshipdata = [
     "title": "Machine learning",
     "subtitle":
         "Made a Music Player using Flutter.This app has inbuilt access to Youtube Music, Gaana, Wynk Music and Jio Saavn . You can also run local Music Using this app",
-    "img": "assets/images/machine learning.png",
+    "img": "assets/images/machinelearning.png",
     "date": "Aug 4, 2020",
     "onpressedurl":
         "https://medium.com/@gauravmehta13/music-player-built-with-flutter-27310b54d02a",
