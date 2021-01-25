@@ -40,9 +40,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
       key: introKey,
       pages: [
         PageViewModel(
-          title: "Why Us?",
+          title: "Welcome to DevsEra",
           body:
-              "Workshops/guidance for personality insights, LinkedIn profile building, interviews skills.",
+              "Internships, Guidance for personality insights, LinkedIn profile building, interviews skills. and much more",
           image: _buildImage('undraw1'),
           decoration: pageDecoration,
         ),

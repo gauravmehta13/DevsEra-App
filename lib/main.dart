@@ -1,9 +1,14 @@
 import 'package:devsera/HomePage.dart';
+
 import 'package:devsera/OnboardingScreen.dart';
 import 'package:devsera/SignIn/Login.dart';
 import 'package:devsera/SignIn/Signup.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'Courses/FreeCourses.dart';
+import 'Internships/Internships.dart';
+import 'OnboardingScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,10 +21,22 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'DevsEra',
       theme: ThemeData(
+          appBarTheme: Theme.of(context)
+              .appBarTheme
+              .copyWith(brightness: Brightness.dark),
           textTheme: GoogleFonts.ubuntuTextTheme(
             Theme.of(context).textTheme,
-          )),
-      home: OnboardingPage(),
+          ),
+          primaryColor: Color(0xFF2821b5)),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/Internships': (context) => Internships(),
+        '/Courses': (context) => FreeCourses(),
+        '/Login': (context) => Login(),
+        '/Signup': (context) => Signup(),
+        '/Onboarding': (context) => OnboardingPage(),
+      },
     );
   }
 }
