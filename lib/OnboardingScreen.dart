@@ -20,7 +20,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   Widget _buildImage(String assetName) {
     return Align(
-      child: Image.asset('assets/$assetName.jpg', width: 350.0),
+      child: Image.asset('assets/images/$assetName.png', width: 350.0),
       alignment: Alignment.bottomCenter,
     );
   }
@@ -40,56 +40,46 @@ class _OnboardingPageState extends State<OnboardingPage> {
       key: introKey,
       pages: [
         PageViewModel(
-          title: "Fractional shares",
+          title: "Why Us?",
           body:
-              "Instead of having to buy an entire share, invest any amount you want.",
-          image: _buildImage('img1'),
+              "Workshops/guidance for personality insights, LinkedIn profile building, interviews skills.",
+          image: _buildImage('undraw1'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Learn as you go",
+          title: "Environment",
           body:
-              "Download the Stockpile app and master the market with our mini-lesson.",
-          image: _buildImage('img2'),
+              "A unique global, multicultural & rare diverse working environment available for interns. We are located across the world and ensure successful projects.",
+          image: _buildImage('undraw2'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Kids and teens",
+          title: "Team",
           body:
-              "Kids and teens can track their stocks 24/7 and place trades that you approve.",
-          image: _buildImage('img3'),
+              "We are students and alumni from top colleges and experts from industry.",
+          image: _buildImage('undraw3'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Another title page",
-          body: "Another beautiful body text for this example onboarding",
-          image: _buildImage('img2'),
+          title: "Get Started Now",
+          body:
+              "An intern will start with a skill he/she is most comfortable with. The function will remain unchanged for at least three months.",
+          image: _buildImage('undraw4'),
           footer: RaisedButton(
             onPressed: () {
-              introKey.currentState?.animateScroll(0);
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (_) => Login()),
+              );
             },
             child: const Text(
-              'FooButton',
+              'Lets Go',
               style: TextStyle(color: Colors.white),
             ),
-            color: Colors.lightBlue,
+            color: Color(0xFF2821B5),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             ),
           ),
-          decoration: pageDecoration,
-        ),
-        PageViewModel(
-          title: "Title of last page",
-          bodyWidget: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text("Click on ", style: bodyStyle),
-              Icon(Icons.edit),
-              Text(" to edit a post", style: bodyStyle),
-            ],
-          ),
-          image: _buildImage('img1'),
           decoration: pageDecoration,
         ),
       ],
@@ -102,6 +92,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       next: const Icon(Icons.arrow_forward),
       done: const Text('Done', style: TextStyle(fontWeight: FontWeight.w600)),
       dotsDecorator: const DotsDecorator(
+        activeColor: Color(0xFF2821b5),
         size: Size(10.0, 10.0),
         color: Color(0xFFBDBDBD),
         activeSize: Size(22.0, 10.0),

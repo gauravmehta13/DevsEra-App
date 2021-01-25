@@ -1,3 +1,5 @@
+import 'package:devsera/HomePage.dart';
+import 'package:devsera/SignIn/Signup.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -19,12 +21,14 @@ class _LoginState extends State<Login> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Align(
-                alignment: Alignment(-1.1,0),
+                alignment: Alignment(-1.1, 0),
                 child: FlatButton(
                   onPressed: () {},
                   child: Text(
                     'Sign Up Later',
-                    style: TextStyle( color: Color(0xFF2821B5),),
+                    style: TextStyle(
+                      color: Color(0xFF2821B5),
+                    ),
                   ),
                 ),
               ),
@@ -112,7 +116,11 @@ class _LoginState extends State<Login> {
               FlatButton(
                   color: Color(0xFF2821B5),
                   height: 50,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (_) => HomePage()),
+                    );
+                  },
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5),
                       side: BorderSide(
@@ -133,7 +141,11 @@ class _LoginState extends State<Login> {
                 height: 20,
               ),
               FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => Signup()),
+                  );
+                },
                 child: Text(
                   'New to DevsEra? Create Account',
                   style: TextStyle(
@@ -148,9 +160,7 @@ class _LoginState extends State<Login> {
                 "By creating an account, you accept Devsera's Terms of\nservice and Privaciy ",
                 textAlign: TextAlign.center,
               ),
-              Spacer(
-                flex: 2,
-              )
+              Spacer()
             ],
           ),
         ),
