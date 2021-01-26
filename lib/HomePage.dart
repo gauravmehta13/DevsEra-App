@@ -8,10 +8,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       drawer: MyDrawer(),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(color: Color(0xFF2821b5)),
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         title: Text(
           'DevsEra',
-          style: TextStyle(color: Color(0xff2821b5),fontWeight: FontWeight.bold, letterSpacing: 0.5,fontSize: 25),
+          style: TextStyle(
+              color: Color(0xff2821b5),
+              fontWeight: FontWeight.w900,
+              letterSpacing: 0.5,
+              fontSize: 25),
         ),
       ),
       body: Column(
@@ -19,41 +24,41 @@ class HomePage extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 30),
-            child: new TextField(
-              decoration: new InputDecoration(
-                  suffixIcon: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(5.0),
-                            bottomRight: Radius.circular(5.0)),
-                        color: Color(0xff2821b5)),
-                    height: 60,
-                    width: 60,
-                    child: Icon(
-                      Icons.search,
-                      color: Colors.white,
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5)),
-                    borderSide: BorderSide(
-                      width: 1,
-                      color: Color(0xFF2821B5),
-                    ),
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5)),
-                    borderSide: BorderSide(
-                      width: 1,
-                      color: Color(0xFF2821B5),
-                    ),
-                  ),
-                  labelText: 'What are you looking for?',
-                  labelStyle: TextStyle(color: Colors.grey)),
-            ),
-          ),
+          // Container(
+          //   padding: EdgeInsets.symmetric(horizontal: 30),
+          //   child: new TextField(
+          //     decoration: new InputDecoration(
+          //         suffixIcon: Container(
+          //           decoration: BoxDecoration(
+          //               borderRadius: BorderRadius.only(
+          //                   topRight: Radius.circular(5.0),
+          //                   bottomRight: Radius.circular(5.0)),
+          //               color: Color(0xff2821b5)),
+          //           height: 60,
+          //           width: 60,
+          //           child: Icon(
+          //             Icons.search,
+          //             color: Colors.white,
+          //           ),
+          //         ),
+          //         focusedBorder: OutlineInputBorder(
+          //           borderRadius: BorderRadius.all(Radius.circular(5)),
+          //           borderSide: BorderSide(
+          //             width: 1,
+          //             color: Color(0xFF2821B5),
+          //           ),
+          //         ),
+          //         border: OutlineInputBorder(
+          //           borderRadius: BorderRadius.all(Radius.circular(5)),
+          //           borderSide: BorderSide(
+          //             width: 1,
+          //             color: Color(0xFF2821B5),
+          //           ),
+          //         ),
+          //         labelText: 'What are you looking for?',
+          //         labelStyle: TextStyle(color: Colors.grey)),
+          //   ),
+          // ),
           SizedBox(
             height: 30,
           ),
@@ -118,7 +123,7 @@ class HomePage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Free Courses",
+                          "DevsEra Trainings",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
@@ -126,7 +131,7 @@ class HomePage extends StatelessWidget {
                           height: 10,
                         ),
                         Text(
-                          "Complete Courses according to the \nguidelines and get Certified.",
+                          "Learn New age skills on-the-go.",
                           style:
                               TextStyle(fontSize: 12, color: Colors.grey[800]),
                         ),

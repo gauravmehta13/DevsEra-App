@@ -1,0 +1,504 @@
+import 'package:devsera/Drawer.dart';
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+class TrainingDetails extends StatefulWidget {
+  @override
+  _TrainingDetailsState createState() => _TrainingDetailsState();
+}
+
+class _TrainingDetailsState extends State<TrainingDetails> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(backgroundColor:  const Color(0xFF397e85),elevation: 0,
+      ),
+      body: SafeArea(
+          child: SingleChildScrollView(
+        child: Container(
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    gradient: new LinearGradient(
+                        colors: [
+                          const Color(0xFF397e85),
+                          const Color(0xFF2ba598),
+                          Theme.of(context).scaffoldBackgroundColor,
+                        ],
+                        stops: [
+                          0.0,
+                          0.7,
+                          1.0,
+                        ],
+                        begin: FractionalOffset.topCenter,
+                        end: FractionalOffset.bottomCenter,
+                        tileMode: TileMode.clamp),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                     
+                      Container(
+                        padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                        decoration: BoxDecoration(
+                            color: Colors.yellow,
+                            borderRadius: BorderRadius.all(Radius.circular(5))),
+                        child: Text(
+                          "Certified Online Training",
+                          style: TextStyle(color:Colors.teal[600],
+                              fontWeight: FontWeight.w900, fontSize: 13),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        "Learn Web\nDevelopment",
+                        style: TextStyle(
+                            fontSize: 50,
+                            fontWeight: FontWeight.w800,
+                            color: Color(0xfffffefe)),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        'Learn full-stack HTML/CSS, MySQL, PHP development and build an e-commerce website from scratch!',
+                        style: TextStyle(
+                            color: Color(0xfffffefe),
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            wordSpacing: 2),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.greenAccent),
+                            borderRadius: BorderRadius.all(Radius.circular(5)),
+                            color: Color(0xff3bb4a3)),
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.calendar,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "4 Weeks",
+                                  style: TextStyle(
+                                      color: Color(0xfffffefe),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Row(
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.earlybirds,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "Beginner Friendly",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Row(
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.paperclip,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "3 Assignments, 1 project",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Row(
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.phone,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "1:1 doubt solving",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(20),
+                  width: MediaQuery.of(context).size.width,
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text("Why Learn Web Development?",
+                          style: TextStyle(
+                              //color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25)),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Container(
+                          padding: EdgeInsets.symmetric(horizontal: 20),
+                          decoration: BoxDecoration(
+                              color: Colors.blue[50],
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5))),
+                          width: MediaQuery.of(context).size.width,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SvgPicture.asset(
+                                "assets/images/webdevelopment.svg",
+                                height: 300,
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text("Plenty of Jobs",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15)),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                  "There will be approximately 1.4 million computing jobs available in 2020, with only 400,000 qualified developers to fill them, those interested in acquiring in-demand skills can certainly benefit from having web development and coding in their resume.",
+                                  style: TextStyle(
+                                      fontSize: 13, color: Colors.grey[700])),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text("A Great Income",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15)),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                  "A certified professional web developers earn an average salary of \$64,970 nation wide. Salary shouldn't be the only factor when deciding whether or not to learn web development, but it should be taken into consideration. ",
+                                  style: TextStyle(
+                                      fontSize: 13, color: Colors.grey[700])),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text("Work From Anywhere",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15)),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                  "Have freedom to work whenever you want from wherever—imagine that. All you need for web development is the internet and a laptop. Not all jobs are remote, but if that is your preference, there are remote jobs out there for you.",
+                                  style: TextStyle(
+                                      fontSize: 13, color: Colors.grey[700])),
+                              SizedBox(
+                                height: 20,
+                              ),
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text("Industry recognized certificate",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              //color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25)),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                          padding: EdgeInsets.symmetric(horizontal: 20),
+                          decoration: BoxDecoration(
+                              color: Colors.blue[50],
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5))),
+                          width: MediaQuery.of(context).size.width,
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text(
+                                    "100,000+ companies use Internshala for hiring every year. So a certificate from Internshala is recognized everywhere."),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                              ])),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text("How will your training work?",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              //color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25)),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        width: MediaQuery.of(context).size.width,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Row(
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.suitcase,
+                                  size: 40,
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Learn Concepts",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15)),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                        "Go through training to learn concepts.",
+                                        style:
+                                            TextStyle(color: Colors.grey[800]))
+                                  ],
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.solidQuestionCircle,
+                                  size: 40,
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Test yourself",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15)),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text("Test knowledge through quizzes.",
+                                        style:
+                                            TextStyle(color: Colors.grey[800]))
+                                  ],
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.codiepie,
+                                  size: 40,
+                                ),
+                                SizedBox(
+                                  width: 22,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Hands-on practice",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15)),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text("Work on assignments and projects.",
+                                        style:
+                                            TextStyle(color: Colors.grey[800]))
+                                  ],
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.sms,
+                                  size: 40,
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("1:1 doubt solving",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15)),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text("Get your doubts solved by experts.",
+                                        style:
+                                            TextStyle(color: Colors.grey[800]))
+                                  ],
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.fileSignature,
+                                  size: 40,
+                                ),
+                                SizedBox(
+                                  width: 15,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Take final exam",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15)),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                        "Complete your training by taking the\nfinal exam",
+                                        style:
+                                            TextStyle(color: Colors.grey[800]))
+                                  ],
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.certificate,
+                                  size: 40,
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Get certified",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15)),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                        "Get certified in Web Development upon\nsuccessful completion of training",
+                                        style:
+                                            TextStyle(color: Colors.grey[800]))
+                                  ],
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 20,
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            )),
+      )),
+    );
+  }
+}

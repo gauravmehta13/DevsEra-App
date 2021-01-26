@@ -7,9 +7,9 @@ class Internships extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         foregroundColor: Colors.transparent,
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         iconTheme: IconThemeData(color: Color(0xFF2821b5)),
-        backgroundColor: Colors.white,
+        
         elevation: 0,
       ),
       drawer: MyDrawer(),

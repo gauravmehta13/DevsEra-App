@@ -9,9 +9,8 @@ class Training extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        foregroundColor: Colors.transparent,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         iconTheme: IconThemeData(color: Color(0xFF2821b5)),
-        backgroundColor: Colors.white,
         elevation: 0,
       ),
       drawer: MyDrawer(),
@@ -25,7 +24,7 @@ class Training extends StatelessWidget {
                 height: 40,
               ),
               Text(
-                "Free Courses",
+                "Free Trainings",
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.w600,
@@ -77,7 +76,6 @@ class Training extends StatelessWidget {
                           ),
                         )),
               ),
-              
             ],
           ),
         ),

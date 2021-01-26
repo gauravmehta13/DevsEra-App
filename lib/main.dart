@@ -3,6 +3,7 @@ import 'package:devsera/OnboardingScreen.dart';
 import 'package:devsera/SignIn/Login.dart';
 import 'package:devsera/SignIn/Signup.dart';
 import 'package:devsera/Trainings/Training.dart';
+import 'package:devsera/Trainings/TrainingDetails.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'Internships/Internships.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
             Theme.of(context).textTheme,
           ),
           primaryColor: Color(0xFF2821b5)),
-      initialRoute: '/Onboarding',
+      initialRoute: '/Trainingdetails',
       routes: {
         '/': (context) => HomePage(),
         '/Internships': (context) => Internships(),
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/Login': (context) => Login(),
         '/Signup': (context) => Signup(),
         '/Onboarding': (context) => OnboardingPage(),
+        '/Trainingdetails':(context)=> TrainingDetails()
       },
     );
   }
