@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
             Theme.of(context).textTheme,
           ),
           primaryColor: Color(0xFF2821b5)),
-      initialRoute: '/Trainingdetails',
+      initialRoute: '/Onboarding',
       routes: {
         '/': (context) => HomePage(),
         '/Internships': (context) => Internships(),

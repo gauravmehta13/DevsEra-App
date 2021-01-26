@@ -49,7 +49,10 @@ class Training extends StatelessWidget {
                       crossAxisSpacing: 20.0,
                     ),
                     itemBuilder: (context, index) => FlatButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(
+                                context, trainingdata[index]['onpressedurl']);
+                          },
                           materialTapTargetSize:
                               MaterialTapTargetSize.shrinkWrap,
                           padding: EdgeInsets.all(0),
