@@ -34477,7 +34477,7 @@ q=b.S(q).f
 return M.p1(r,s,Q.mp(!0,M.bd(s,T.c4(H.c([o,n,m,l,k,M.bd(s,B.acv(new B.Fc(2,20,20,1),new O.Tc(),4),C.k,s,s,s,s,q.a.a,s,new V.ad(20,20,20,20),s,s,s)],t.Z),C.A,C.v,C.t),C.k,s,s,s,s,s,s,s,s,s,p.a.a),C.ah,!0),new K.oB(s))}}
 O.Tc.prototype={
 $2:function(a,b){var s=null,r=F.a8s(C.L.h(0,200)),q=K.fv(5)
-return N.e3(M.bd(s,T.c4(H.c([U.lI($.ags[b].h(0,"onpressedurl"),s,s),new R.fm(1,s),L.ao($.ags[b].h(0,"title"),s,s,s,A.au(s,s,C.t7.h(0,700),s,s,s,s,s,s,s,s,16,s,C.b2,s,s,!0,s,s,s,s,s,s),s)],t.Z),C.A,C.v,C.t),C.k,s,s,new S.c2(C.j,s,r,q,s,s,C.Q),s,s,s,new V.ad(10,10,10,10),s,s,s),s,s,C.cs,new O.Tb(),new V.ad(0,0,0,0),s)},
+return N.e3(M.bd(s,T.c4(H.c([U.lI($.ags[b].h(0,"img"),s,s),new R.fm(1,s),L.ao($.ags[b].h(0,"title"),s,s,s,A.au(s,s,C.t7.h(0,700),s,s,s,s,s,s,s,s,16,s,C.b2,s,s,!0,s,s,s,s,s,s),s)],t.Z),C.A,C.v,C.t),C.k,s,s,new S.c2(C.j,s,r,q,s,s,C.Q),s,s,s,new V.ad(10,10,10,10),s,s,s),s,s,C.cs,new O.Tb(),new V.ad(0,0,0,0),s)},
 $C:"$2",
 $R:2,
 $S:120}
@@ -34595,7 +34595,7 @@ $C:"$2",
 $R:2,
 $S:120}
 G.a06.prototype={
-$0:function(){K.CH(this.a,$.aaW[this.b].h(0,"img"),t._)},
+$0:function(){K.CH(this.a,$.aaW[this.b].h(0,"onpressedurl"),t._)},
 $S:1}
 E.mN.prototype={
 aB:function(){return new E.Lw(C.m)}}
