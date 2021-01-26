@@ -1,12 +1,10 @@
 import 'package:devsera/HomePage.dart';
-
 import 'package:devsera/OnboardingScreen.dart';
 import 'package:devsera/SignIn/Login.dart';
 import 'package:devsera/SignIn/Signup.dart';
+import 'package:devsera/Trainings/Training.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'Courses/FreeCourses.dart';
 import 'Internships/Internships.dart';
 import 'OnboardingScreen.dart';
 
@@ -32,7 +30,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomePage(),
         '/Internships': (context) => Internships(),
-        '/Courses': (context) => FreeCourses(),
+        '/Training': (context) => Training(),
         '/Login': (context) => Login(),
         '/Signup': (context) => Signup(),
         '/Onboarding': (context) => OnboardingPage(),

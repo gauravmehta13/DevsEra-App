@@ -1,4 +1,4 @@
-var coursedata = [
+var trainingdata = [
   {
     "title": "Data Science",
     "subtitle":

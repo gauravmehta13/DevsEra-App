@@ -1,8 +1,10 @@
 import 'package:devsera/Drawer.dart';
-import 'package:devsera/Courses/CourseData.dart';
+
 import 'package:flutter/material.dart';
 
-class FreeCourses extends StatelessWidget {
+import 'TrainingData.dart';
+
+class Training extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,10 +63,10 @@ class FreeCourses extends StatelessWidget {
                             padding: EdgeInsets.all(10),
                             child: Column(
                               children: [
-                                Image.asset(coursedata[index]['img']),
+                                Image.asset(trainingdata[index]['img']),
                                 Spacer(),
                                 Text(
-                                  coursedata[index]['title'],
+                                  trainingdata[index]['title'],
                                   style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w600,
@@ -75,6 +77,7 @@ class FreeCourses extends StatelessWidget {
                           ),
                         )),
               ),
+              
             ],
           ),
         ),
