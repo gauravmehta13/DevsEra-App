@@ -43,7 +43,7 @@ class Training extends StatelessWidget {
                 padding: EdgeInsets.all(20),
                 height: MediaQuery.of(context).size.height,
                 child: GridView.builder(
-                    itemCount: 6,
+                    itemCount: trainingdata.length,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       childAspectRatio: 1.0,
@@ -83,7 +83,9 @@ class Training extends StatelessWidget {
                             padding: EdgeInsets.all(10),
                             child: Column(
                               children: [
-                              Image.asset(trainingdata[index]['img'],),
+                                Image.asset(
+                                  trainingdata[index]['img'],
+                                ),
                                 Spacer(),
                                 Text(
                                   trainingdata[index]['title'],
