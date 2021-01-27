@@ -1,5 +1,6 @@
 import 'package:devsera/Drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'Internship Data.dart';
 
 class Internships extends StatelessWidget {
@@ -61,7 +62,10 @@ class Internships extends StatelessWidget {
                             padding: EdgeInsets.all(10),
                             child: Column(
                               children: [
-                                Image.asset(internshipdata[index]['img']),
+                                SvgPicture.asset(
+                                 internshipdata[index]['img'],
+                                  height: 100,
+                                ),
                                 Spacer(),
                                 Text(
                                   internshipdata[index]['title'],

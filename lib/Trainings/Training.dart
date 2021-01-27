@@ -1,6 +1,8 @@
 import 'package:devsera/Drawer.dart';
+import 'package:devsera/Trainings/TrainingDetails.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'TrainingData.dart';
 
@@ -50,8 +52,24 @@ class Training extends StatelessWidget {
                     ),
                     itemBuilder: (context, index) => FlatButton(
                           onPressed: () {
-                            Navigator.pushNamed(
-                                context, trainingdata[index]['onpressedurl']);
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => TrainingDetails(
+                                      trainingtitle: trainingdata[index]
+                                          ['trainingtitle'],
+                                      subtitle: trainingdata[index]['subtitle'],
+                                      box1: trainingdata[index]['box1'],
+                                      box2: trainingdata[index]['box2'],
+                                      box3: trainingdata[index]['box3'],
+                                      box4: trainingdata[index]['box4'],
+                                      img: trainingdata[index]['img'],
+                                      sh1: trainingdata[index]['sh1'],
+                                      sh2: trainingdata[index]['sh2'],
+                                      sh3: trainingdata[index]['sh3'],
+                                      p1: trainingdata[index]['p1'],
+                                      p2: trainingdata[index]['p2'],
+                                      p3: trainingdata[index]['p3'],
+                                      h1: trainingdata[index]['h1'],
+                                    )));
                           },
                           materialTapTargetSize:
                               MaterialTapTargetSize.shrinkWrap,
@@ -65,7 +83,10 @@ class Training extends StatelessWidget {
                             padding: EdgeInsets.all(10),
                             child: Column(
                               children: [
-                                Image.asset(trainingdata[index]['img']),
+                                SvgPicture.asset(
+                                  trainingdata[index]['img'],
+                                  height: 100,
+                                ),
                                 Spacer(),
                                 Text(
                                   trainingdata[index]['title'],

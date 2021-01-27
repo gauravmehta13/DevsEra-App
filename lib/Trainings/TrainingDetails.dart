@@ -3,16 +3,46 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class TrainingDetails extends StatefulWidget {
-  @override
-  _TrainingDetailsState createState() => _TrainingDetailsState();
-}
+class TrainingDetails extends StatelessWidget {
+  String trainingtitle;
+  String subtitle;
+  String box1;
+  String box2;
+  String box3;
+  String box4;
+  String h1;
+  String img;
+  String sh1;
+  String p1;
+  String sh2;
+  String p2;
+  String sh3;
+  String p3;
+  String url;
 
-class _TrainingDetailsState extends State<TrainingDetails> {
+  TrainingDetails(
+      {this.box1,
+      this.box2,
+      this.box3,
+      this.box4,
+      this.h1,
+      this.img,
+      this.p1,
+      this.p2,
+      this.p3,
+      this.sh1,
+      this.sh2,
+      this.sh3,
+      this.subtitle,
+      this.trainingtitle,
+      this.url});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor:  const Color(0xFF397e85),elevation: 0,
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF397e85),
+        elevation: 0,
       ),
       body: SafeArea(
           child: SingleChildScrollView(
@@ -42,7 +72,6 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                     
                       Container(
                         padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                         decoration: BoxDecoration(
@@ -50,15 +79,17 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                             borderRadius: BorderRadius.all(Radius.circular(5))),
                         child: Text(
                           "Certified Online Training",
-                          style: TextStyle(color:Colors.teal[600],
-                              fontWeight: FontWeight.w900, fontSize: 13),
+                          style: TextStyle(
+                              color: Colors.teal[600],
+                              fontWeight: FontWeight.w900,
+                              fontSize: 13),
                         ),
                       ),
                       SizedBox(
                         height: 20,
                       ),
                       Text(
-                        "Learn Web\nDevelopment",
+                        trainingtitle,
                         style: TextStyle(
                             fontSize: 50,
                             fontWeight: FontWeight.w800,
@@ -68,7 +99,7 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                         height: 20,
                       ),
                       Text(
-                        'Learn full-stack HTML/CSS, MySQL, PHP development and build an e-commerce website from scratch!',
+                        subtitle,
                         style: TextStyle(
                             color: Color(0xfffffefe),
                             fontSize: 17,
@@ -97,7 +128,7 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                                   width: 10,
                                 ),
                                 Text(
-                                  "4 Weeks",
+                                  box1,
                                   style: TextStyle(
                                       color: Color(0xfffffefe),
                                       fontWeight: FontWeight.bold,
@@ -119,7 +150,7 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                                   width: 10,
                                 ),
                                 Text(
-                                  "Beginner Friendly",
+                                  box2,
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
@@ -141,7 +172,7 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                                   width: 10,
                                 ),
                                 Text(
-                                  "3 Assignments, 1 project",
+                                  box3,
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
@@ -163,7 +194,7 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                                   width: 10,
                                 ),
                                 Text(
-                                  "1:1 doubt solving",
+                                  box4,
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
@@ -188,7 +219,7 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                       SizedBox(
                         height: 20,
                       ),
-                      Text("Why Learn Web Development?",
+                      Text(h1,
                           style: TextStyle(
                               //color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -207,49 +238,46 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SvgPicture.asset(
-                                "assets/images/webdevelopment.svg",
+                                img,
                                 height: 300,
                               ),
                               SizedBox(
                                 height: 20,
                               ),
-                              Text("Plenty of Jobs",
+                              Text(sh1,
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15)),
                               SizedBox(
                                 height: 10,
                               ),
-                              Text(
-                                  "There will be approximately 1.4 million computing jobs available in 2020, with only 400,000 qualified developers to fill them, those interested in acquiring in-demand skills can certainly benefit from having web development and coding in their resume.",
+                              Text(p1,
                                   style: TextStyle(
                                       fontSize: 13, color: Colors.grey[700])),
                               SizedBox(
                                 height: 20,
                               ),
-                              Text("A Great Income",
+                              Text(sh2,
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15)),
                               SizedBox(
                                 height: 10,
                               ),
-                              Text(
-                                  "A certified professional web developers earn an average salary of \$64,970 nation wide. Salary shouldn't be the only factor when deciding whether or not to learn web development, but it should be taken into consideration. ",
+                              Text(p2,
                                   style: TextStyle(
                                       fontSize: 13, color: Colors.grey[700])),
                               SizedBox(
                                 height: 20,
                               ),
-                              Text("Work From Anywhere",
+                              Text(sh3,
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 15)),
                               SizedBox(
                                 height: 10,
                               ),
-                              Text(
-                                  "Have freedom to work whenever you want from wherever—imagine that. All you need for web development is the internet and a laptop. Not all jobs are remote, but if that is your preference, there are remote jobs out there for you.",
+                              Text(p3,
                                   style: TextStyle(
                                       fontSize: 13, color: Colors.grey[700])),
                               SizedBox(
@@ -296,7 +324,7 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                                 ),
                               ])),
                       SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
                       Text("How will your training work?",
                           textAlign: TextAlign.center,
@@ -305,7 +333,7 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                               fontWeight: FontWeight.bold,
                               fontSize: 25)),
                       SizedBox(
-                        height: 20,
+                        height: 30,
                       ),
                       Container(
                         padding: EdgeInsets.symmetric(horizontal: 20),
@@ -316,7 +344,7 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                             Row(
                               children: [
                                 FaIcon(
-                                  FontAwesomeIcons.suitcase,
+                                  FontAwesomeIcons.home,
                                   size: 40,
                                 ),
                                 SizedBox(
@@ -325,15 +353,14 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text("Learn Concepts",
+                                    Text("Learn from Home",
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 15)),
                                     SizedBox(
                                       height: 5,
                                     ),
-                                    Text(
-                                        "Go through training to learn concepts.",
+                                    Text("Stay safe indoors",
                                         style:
                                             TextStyle(color: Colors.grey[800]))
                                   ],
@@ -413,14 +440,14 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text("1:1 doubt solving",
+                                    Text("Doubt clearing",
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 15)),
                                     SizedBox(
                                       height: 5,
                                     ),
-                                    Text("Get your doubts solved by experts.",
+                                    Text("Through Q&A forum",
                                         style:
                                             TextStyle(color: Colors.grey[800]))
                                   ],
@@ -442,15 +469,14 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text("Take final exam",
+                                    Text("Beginner friendly",
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 15)),
                                     SizedBox(
                                       height: 5,
                                     ),
-                                    Text(
-                                        "Complete your training by taking the\nfinal exam",
+                                    Text("No prior knowledge required.",
                                         style:
                                             TextStyle(color: Colors.grey[800]))
                                   ],
@@ -480,7 +506,7 @@ class _TrainingDetailsState extends State<TrainingDetails> {
                                       height: 5,
                                     ),
                                     Text(
-                                        "Get certified in Web Development upon\nsuccessful completion of training",
+                                        "Get certified upon successful\ncompletion of training.",
                                         style:
                                             TextStyle(color: Colors.grey[800]))
                                   ],
