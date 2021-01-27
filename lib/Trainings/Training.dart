@@ -83,10 +83,7 @@ class Training extends StatelessWidget {
                             padding: EdgeInsets.all(10),
                             child: Column(
                               children: [
-                                SvgPicture.asset(
-                                  trainingdata[index]['img'],
-                                  height: 100,
-                                ),
+                              Image.asset(trainingdata[index]['img'],),
                                 Spacer(),
                                 Text(
                                   trainingdata[index]['title'],

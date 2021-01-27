@@ -62,10 +62,7 @@ class Internships extends StatelessWidget {
                             padding: EdgeInsets.all(10),
                             child: Column(
                               children: [
-                                SvgPicture.asset(
-                                 internshipdata[index]['img'],
-                                  height: 100,
-                                ),
+                              Image.asset(internshipdata[index]['img'],),
                                 Spacer(),
                                 Text(
                                   internshipdata[index]['title'],

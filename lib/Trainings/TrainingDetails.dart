@@ -230,16 +230,15 @@ class TrainingDetails extends StatelessWidget {
                       Container(
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           decoration: BoxDecoration(
-                              color: Colors.blue[50],
+                              color: Colors.white,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(5))),
                           width: MediaQuery.of(context).size.width,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              SvgPicture.asset(
+                            Image.asset(
                                 img,
-                                height: 300,
                               ),
                               SizedBox(
                                 height: 20,
