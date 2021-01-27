@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'HomePage.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -65,8 +66,14 @@ class MyDrawer extends StatelessWidget {
             ListTile(
               minLeadingWidth: 25,
               onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/Courses');
+                Fluttertoast.showToast(
+                    msg: "Coming Soon",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.BOTTOM,
+                    timeInSecForIosWeb: 1,
+                    backgroundColor: Color(0xff2821b5),
+                    textColor: Colors.white,
+                    fontSize: 16.0);
               },
               title: Text("Contact Us"),
               leading: FaIcon(
@@ -78,8 +85,14 @@ class MyDrawer extends StatelessWidget {
             Spacer(),
             ListTile(
               onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/Courses');
+                Fluttertoast.showToast(
+                    msg: "Coming Soon",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.BOTTOM,
+                    timeInSecForIosWeb: 1,
+                    backgroundColor: Color(0xff2821b5),
+                    textColor: Colors.white,
+                    fontSize: 16.0);
               },
               title: Text("Report a Complaint"),
               minLeadingWidth: 25,

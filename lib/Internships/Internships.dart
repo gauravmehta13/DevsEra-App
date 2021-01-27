@@ -1,6 +1,6 @@
 import 'package:devsera/Drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'Internship Data.dart';
 
 class Internships extends StatelessWidget {
@@ -8,9 +8,8 @@ class Internships extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         iconTheme: IconThemeData(color: Color(0xFF2821b5)),
-        
         elevation: 0,
       ),
       drawer: MyDrawer(),
@@ -49,7 +48,16 @@ class Internships extends StatelessWidget {
                       crossAxisSpacing: 20.0,
                     ),
                     itemBuilder: (context, index) => FlatButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Fluttertoast.showToast(
+                                msg: "Coming Soon",
+                                toastLength: Toast.LENGTH_SHORT,
+                                gravity: ToastGravity.BOTTOM,
+                                timeInSecForIosWeb: 1,
+                                backgroundColor: Color(0xff2821b5),
+                                textColor: Colors.white,
+                                fontSize: 16.0);
+                          },
                           materialTapTargetSize:
                               MaterialTapTargetSize.shrinkWrap,
                           padding: EdgeInsets.all(0),
@@ -62,7 +70,9 @@ class Internships extends StatelessWidget {
                             padding: EdgeInsets.all(10),
                             child: Column(
                               children: [
-                              Image.asset(internshipdata[index]['img'],),
+                                Image.asset(
+                                  internshipdata[index]['img'],
+                                ),
                                 Spacer(),
                                 Text(
                                   internshipdata[index]['title'],

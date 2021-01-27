@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+
+import '../HomePage.dart';
 
 class Signup extends StatefulWidget {
   @override
@@ -24,7 +27,11 @@ class _SignupState extends State<Signup> {
               Align(
                 alignment: Alignment(-1.1, 0),
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (_) => HomePage()),
+                    );
+                  },
                   child: Text(
                     'Sign Up Later',
                     style: TextStyle(
@@ -118,7 +125,16 @@ class _SignupState extends State<Signup> {
               FlatButton(
                   color: Color(0xFF2821B5),
                   height: 50,
-                  onPressed: () {},
+                  onPressed: () {
+                    Fluttertoast.showToast(
+                        msg: "Coming Soon",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Color(0xff2821b5),
+                        textColor: Colors.white,
+                        fontSize: 16.0);
+                  },
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5),
                       side: BorderSide(
@@ -138,13 +154,20 @@ class _SignupState extends State<Signup> {
               SizedBox(
                 height: 10,
               ),
-              Row(mainAxisAlignment: MainAxisAlignment.center,
-                children: [Expanded( 
-                  child: Container(
-                    child: Divider(thickness: 1.5,)),
-                ), Text("  or  ",
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Container(
+                        child: Divider(
+                      thickness: 1.5,
+                    )),
+                  ),
+                  Text(
+                    "  or  ",
                     style: TextStyle(fontStyle: FontStyle.italic),
-                  ), Expanded(
+                  ),
+                  Expanded(
                     child: Container(
                         child: Divider(
                       thickness: 1.5,
@@ -157,7 +180,9 @@ class _SignupState extends State<Signup> {
               ),
               FlatButton(
                   height: 50,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/Login');
+                  },
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5),
                       side: BorderSide(

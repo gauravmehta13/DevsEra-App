@@ -16,8 +16,12 @@ dependencies:
   google_fonts: ^1.1.1
   carousel_slider: ^2.3.1
   font_awesome_flutter: ^8.11.0
-  flutter_svg: ^0.19.2+1
   flutter_automation:
+  firebase_auth:
+  google_sign_in:
+  firebase_core:
+  fluttertoast:
+  shared_preferences:
 
 dev_dependencies:
   flutter_test:

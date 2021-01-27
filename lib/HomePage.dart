@@ -69,7 +69,9 @@ class HomePage extends StatelessWidget {
               items: [
                 FlatButton(
                   color: Colors.transparent,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/Internships');
+                  },
                   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   padding: EdgeInsets.all(0),
                   child: Container(
@@ -99,7 +101,9 @@ class HomePage extends StatelessWidget {
                             materialTapTargetSize:
                                 MaterialTapTargetSize.shrinkWrap,
                             padding: EdgeInsets.all(0),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/Internships');
+                            },
                             child: Text(
                               "View Internships",
                               style: TextStyle(color: Color(0xFF2821B5)),
@@ -110,7 +114,9 @@ class HomePage extends StatelessWidget {
                 ),
                 FlatButton(
                   color: Colors.transparent,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/Training');
+                  },
                   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   padding: EdgeInsets.all(0),
                   child: Container(
@@ -140,9 +146,11 @@ class HomePage extends StatelessWidget {
                             materialTapTargetSize:
                                 MaterialTapTargetSize.shrinkWrap,
                             padding: EdgeInsets.all(0),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/Training');
+                            },
                             child: Text(
-                              "View Courses",
+                              "View Trainings",
                               style: TextStyle(color: Color(0xFF2821B5)),
                             ))
                       ],

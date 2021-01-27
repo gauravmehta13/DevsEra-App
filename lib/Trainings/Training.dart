@@ -1,9 +1,6 @@
 import 'package:devsera/Drawer.dart';
 import 'package:devsera/Trainings/TrainingDetails.dart';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-
 import 'TrainingData.dart';
 
 class Training extends StatelessWidget {
